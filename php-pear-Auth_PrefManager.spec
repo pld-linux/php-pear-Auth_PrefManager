@@ -12,7 +12,7 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 # Source0-md5:	47ec223ae58d108977338f5ff8d2be37
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-URL:		http://pear.php.net/package/%{_pearname}/
+URL:		http://pear.php.net/package/Auth_PrefManager/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
 Requires:	php-pear-DB >= 1.3
