@@ -1,16 +1,16 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Auth
 %define 	_subclass	PrefManager
-%define		_status		devel
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - Preferences management class
 Summary(pl):	%{_pearname} - klasa do zarz±dzania preferencjami
 Name:		php-pear-%{_pearname}
-Version:	0.2.2
+Version:	1.0.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	edd371c6f79499a8eeeb441927b819db
+# Source0-md5:	47ec223ae58d108977338f5ff8d2be37
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
