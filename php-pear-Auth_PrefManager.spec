@@ -31,7 +31,7 @@ found for that user. It is designed to be used alongside the PEAR Auth
 class, but can be used with anything that allows you to obtain the
 user's id - including your own code.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Preference Manager (Zarz±dca ustawieñ) to klasa obs³uguj±ca ustawienia
