@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - preferences management class
 Summary(pl):	%{_pearname} - klasa do zarz±dzania preferencjami
 Name:		php-pear-%{_pearname}
-Version:	1.1.3
-Release:	2
+Version:	1.1.4
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	88f6a72b8797584a44ee09f24af67d75
+# Source0-md5:	b29c2f95475fbc4970e2fa2d93715ae7
 URL:		http://pear.php.net/package/Auth_PrefManager/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
