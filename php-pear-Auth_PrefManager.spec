@@ -30,7 +30,7 @@ found for that user. It is designed to be used alongside the PEAR Auth
 class, but can be used with anything that allows you to obtain the
 user's id - including your own code.
 
-This class has in PEAR status: %{_status}
+This class has in PEAR status: %{_status}.
 
 %description -l pl
 Preference Manager (Zarz±dca ustawieñ) to klasa obs³uguj±ca ustawienia
@@ -42,7 +42,7 @@ u¿ytkownika. Klasa zosta³a zaprojektowana w celu u¿ywania wraz z klas±
 PEAR-a Auth, ale mo¿e byæ u¿ywana z czymkolwiek, co pozwala na
 uzyskanie identyfikatora u¿ytkownika - w³±cznie z w³asnym kodem.
 
-Ta klasa ma w PEAR status: %{_status}
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
