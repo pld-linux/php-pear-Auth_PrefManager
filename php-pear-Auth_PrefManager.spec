@@ -2,13 +2,12 @@
 %define		_class		Auth
 %define 	_subclass	PrefManager
 %define		_status		devel
-
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - Preferences management class
 Summary(pl):	%{_pearname} - klasa do zarz±dzania preferencjami
 Name:		php-pear-%{_pearname}
-Version:	0.2.0
-Release:	0.1
+Version:	0.2.2
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
