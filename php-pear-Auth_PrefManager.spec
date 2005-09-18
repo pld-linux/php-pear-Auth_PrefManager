@@ -52,7 +52,7 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
-cp -a ./%{php_pear_dir}/{.registry,*} $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 # For compatibility with old class:
 ln -s %{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/preferences.php
