@@ -1,5 +1,4 @@
 %include	/usr/lib/rpm/macros.php
-%include	/usr/lib/rpm/macros.pear
 %define		_class		Auth
 %define 	_subclass	PrefManager
 %define		_status		stable
@@ -15,7 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	b29c2f95475fbc4970e2fa2d93715ae7
 URL:		http://pear.php.net/package/Auth_PrefManager/
-BuildRequires:	php-pear-build
+BuildRequires:	rpm-php-pearprov >= 4.4.2-10.2
 Requires:	php-pear
 Provides:	php-pear-PrefManager
 Obsoletes:	php-pear-PrefManager
