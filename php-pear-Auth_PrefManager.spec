@@ -14,7 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	b29c2f95475fbc4970e2fa2d93715ae7
 URL:		http://pear.php.net/package/Auth_PrefManager/
-BuildRequires:	rpm-php-pearprov >= 4.4.2-10.2
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Provides:	php-pear-PrefManager
 Obsoletes:	php-pear-PrefManager
