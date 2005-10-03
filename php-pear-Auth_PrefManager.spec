@@ -16,6 +16,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/Auth_PrefManager/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
+Requires:	php-pear-DB >= 1.6.0
 Provides:	php-pear-PrefManager
 Obsoletes:	php-pear-PrefManager
 BuildArch:	noarch
