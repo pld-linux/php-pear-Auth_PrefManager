@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - preferences management class
-Summary(pl):	%{_pearname} - klasa do zarz±dzania preferencjami
+Summary(pl.UTF-8):   %{_pearname} - klasa do zarzƒÖdzania preferencjami
 Name:		php-pear-%{_pearname}
 Version:	1.1.4
 Release:	2
@@ -35,15 +35,15 @@ user's id - including your own code.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Preference Manager (Zarz±dca ustawieÒ) to klasa obs≥uguj±ca ustawienia
-uøytkownika w aplikacjach WWW, wyszukiwania ich w tabeli przy uøyciu
-kombinacji identyfikatora uøytkownika i nazwy ustawienia w celu
-uzyskania warto∂ci i (opcjonalnie) zwrÛcenia domy∂lnej warto∂ci
-ustawienia w przypadku nie znalezienia warto∂ci dla danego
-uøytkownika. Klasa zosta≥a zaprojektowana w celu uøywania wraz z klas±
-PEAR-a Auth, ale moøe byÊ uøywana z czymkolwiek, co pozwala na
-uzyskanie identyfikatora uøytkownika - w≥±cznie z w≥asnym kodem.
+%description -l pl.UTF-8
+Preference Manager (ZarzƒÖdca ustawie≈Ñ) to klasa obs≈ÇugujƒÖca ustawienia
+u≈ºytkownika w aplikacjach WWW, wyszukiwania ich w tabeli przy u≈ºyciu
+kombinacji identyfikatora u≈ºytkownika i nazwy ustawienia w celu
+uzyskania warto≈õci i (opcjonalnie) zwr√≥cenia domy≈õlnej warto≈õci
+ustawienia w przypadku nie znalezienia warto≈õci dla danego
+u≈ºytkownika. Klasa zosta≈Ça zaprojektowana w celu u≈ºywania wraz z klasƒÖ
+PEAR-a Auth, ale mo≈ºe byƒá u≈ºywana z czymkolwiek, co pozwala na
+uzyskanie identyfikatora u≈ºytkownika - w≈ÇƒÖcznie z w≈Çasnym kodem.
 
 Ta klasa ma w PEAR status: %{_status}.
 
