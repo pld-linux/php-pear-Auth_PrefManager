@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - preferences management class
-Summary(pl.UTF-8):   %{_pearname} - klasa do zarządzania preferencjami
+Summary(pl.UTF-8):	%{_pearname} - klasa do zarządzania preferencjami
 Name:		php-pear-%{_pearname}
 Version:	1.1.4
 Release:	2
