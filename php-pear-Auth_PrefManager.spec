@@ -1,28 +1,25 @@
+%define		status		stable
+%define		pearname Auth_PrefManager
 %include	/usr/lib/rpm/macros.php
-%define		_class		Auth
-%define 	_subclass	PrefManager
-%define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
-
-Summary:	%{_pearname} - preferences management class
-Summary(pl.UTF-8):	%{_pearname} - klasa do zarządzania preferencjami
-Name:		php-pear-%{_pearname}
+Summary:	%{pearname} - preferences management class
+Summary(pl.UTF-8):	%{pearname} - klasa do zarządzania preferencjami
+Name:		php-pear-%{pearname}
 Version:	1.2.0
-Release:	4
+Release:	5
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	48bcd80f076cb1d5a78fbcd2b7fd6dbd
 URL:		http://pear.php.net/package/Auth_PrefManager/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-DB >= 1.7.0
 Requires:	php-pear-PEAR-core >= 1:1.4.0
-Provides:	php-pear-PrefManager
-Obsoletes:	php-pear-PrefManager
+Provides:	php-pear-PrefManager = 0.2.0
 Obsoletes:	php-pear-Auth_PrefManager-tests
+Obsoletes:	php-pear-PrefManager < 0.2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +32,7 @@ found for that user. It is designed to be used alongside the PEAR Auth
 class, but can be used with anything that allows you to obtain the
 user's id - including your own code.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Preference Manager (Zarządca ustawień) to klasa obsługująca ustawienia
@@ -47,7 +44,7 @@ użytkownika. Klasa została zaprojektowana w celu używania wraz z klasą
 PEAR-a Auth, ale może być używana z czymkolwiek, co pozwala na
 uzyskanie identyfikatora użytkownika - włącznie z własnym kodem.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
@@ -59,7 +56,7 @@ install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
 # For compatibility with old class:
-ln -s %{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/preferences.php
+ln -s PrefManager.php $RPM_BUILD_ROOT%{php_pear_dir}/Auth/preferences.php
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,6 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{_pearname}/docs/*
+%doc docs/%{pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/Auth/*.php
