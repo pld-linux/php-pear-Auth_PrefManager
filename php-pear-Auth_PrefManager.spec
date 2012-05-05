@@ -1,15 +1,15 @@
 %define		status		stable
-%define		pearname Auth_PrefManager
+%define		pearname	Auth_PrefManager
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - preferences management class
 Summary(pl.UTF-8):	%{pearname} - klasa do zarządzania preferencjami
 Name:		php-pear-%{pearname}
-Version:	1.2.0
-Release:	5
+Version:	1.2.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	48bcd80f076cb1d5a78fbcd2b7fd6dbd
+# Source0-md5:	31f049951a63bf855b5435550cab7ed0
 URL:		http://pear.php.net/package/Auth_PrefManager/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -49,6 +49,11 @@ Ta klasa ma w PEAR status: %{status}.
 %prep
 %pear_package_setup
 
+mv .%{php_pear_dir}/data/Auth_PrefManager/README .
+
+# buggy packaging
+mv .%{php_pear_dir}/Auth/{Auth/,}PrefManager.php
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -65,5 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %doc docs/%{pearname}/docs/*
+%doc README
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Auth/*.php
