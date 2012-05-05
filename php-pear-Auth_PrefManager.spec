@@ -52,6 +52,7 @@ Ta klasa ma w PEAR status: %{status}.
 mv .%{php_pear_dir}/data/Auth_PrefManager/README .
 
 # buggy packaging
+# https://pear.php.net/bugs/19408
 mv .%{php_pear_dir}/Auth/{Auth/,}PrefManager.php
 
 %install
