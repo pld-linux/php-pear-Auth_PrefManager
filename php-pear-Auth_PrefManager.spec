@@ -4,12 +4,12 @@
 Summary:	%{pearname} - preferences management class
 Summary(pl.UTF-8):	%{pearname} - klasa do zarządzania preferencjami
 Name:		php-pear-%{pearname}
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
-License:	PHP 2.02
+License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	31f049951a63bf855b5435550cab7ed0
+# Source0-md5:	77055fdd23539d68f52166c273162799
 URL:		http://pear.php.net/package/Auth_PrefManager/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -51,9 +51,11 @@ Ta klasa ma w PEAR status: %{status}.
 
 mv .%{php_pear_dir}/data/Auth_PrefManager/README .
 
-# buggy packaging
-# https://pear.php.net/bugs/19408
-mv .%{php_pear_dir}/Auth/{Auth/,}PrefManager.php
+mv .%{php_pear_dir}/docs .
+install -d examples
+mv docs/PM_Example.php examples
+
+rm -rf .%{php_pear_dir}/data/Auth_PrefManager/tests
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -64,13 +66,17 @@ install -d $RPM_BUILD_ROOT%{php_pear_dir}
 # For compatibility with old class:
 ln -s PrefManager.php $RPM_BUILD_ROOT%{php_pear_dir}/Auth/preferences.php
 
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{pearname}/docs/*
 %doc README
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/Auth/*.php
+%{php_pear_dir}/Auth/PrefManager.php
+%{php_pear_dir}/Auth/preferences.php
+%{_examplesdir}/%{name}-%{version}
