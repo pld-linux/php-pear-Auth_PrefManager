@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	Auth_PrefManager
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - preferences management class
 Summary(pl.UTF-8):	%{pearname} - klasa do zarządzania preferencjami
 Name:		php-pear-%{pearname}
