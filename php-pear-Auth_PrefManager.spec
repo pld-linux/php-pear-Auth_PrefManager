@@ -4,7 +4,7 @@ Summary:	%{pearname} - preferences management class
 Summary(pl.UTF-8):	%{pearname} - klasa do zarządzania preferencjami
 Name:		php-pear-%{pearname}
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
